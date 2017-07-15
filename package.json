@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "author": "FullstopCoding",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "how-to-npm-tutorial"
+    "url": "https://github.com/FullstopCoding/how-to-npm"
   },
   "keywords": [
     "how-to-npm-tutorial"
   ],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  }
 }
