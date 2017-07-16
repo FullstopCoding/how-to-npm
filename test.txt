@@ -1,0 +1,28 @@
+Table of Contents
+
+Start Here
+How to learn
+What is the Most Useful CS Bookmark You have
+Programs & Classes
+Learn HTML
+Learn CSS
+Learn JavaScript
+Learn React.js
+Full Stack Tutorials
+Learn Node.js
+Learn Python
+Learn APIs
+Learn Databases
+Learn Authentication
+Learn Git
+Games & Challenge Websites
+Free Programming Books
+Open Source Contribution Opportunities
+Am I Ready to be a Developer?
+Software Developer Success Stories
+Resume's, Portfolio's, LinkedIn, Interview Prep, & Salary Information
+Start Here
+
+The list below isn't meant to be exclusive, it's more so a collection of links that have helped me out along the way (and can hopefully help you). As you'll see, I've focused on JavaScript, React, and Node.js. There is also a wealth of information on interview prep and applying to jobs.
+
+More free resources can be found on codeburst.io
