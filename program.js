@@ -47,22 +47,79 @@ asyncRead();
 
 //You will be provided a directory name as the first argument to your program (e.g. '/path/to/dir/') and a file extension to filter by as the second argument.
 
+/*
 const fs = require('fs');
 const path = require('path');
-
-var directory = process.argv[2];
-var fileType = "." + process.argv[3];
+const directory = process.argv[2];
+const fileType = "." + process.argv[3];
 
 function readIt() {
-  fs.readdir(directory, function callback(err, list) {
+  fs.readdir(directory, function (err, list) {
     if (err) {
       return console.log(err);
     }
-    console.log(directory);
     let fileList = list.filter(function(el){
       return path.extname(el) === fileType;
     });
-    console.log(fileList);
+
+    for (var i = 0; i < fileList.length; i++) {
+      console.log(fileList[i]);
+    }
+
+  });
+}
+readIt();
+*/
+
+/* NodeSchool solution
+var fs = require('fs')
+var path = require('path')
+var folder = process.argv[2]
+var ext = '.' + process.argv[3]
+
+   fs.readdir(folder, function (err, files) {
+     if (err) return console.error(err)
+     files.forEach(function (file) {
+       if (path.extname(file) === ext) {
+         console.log(file)
+       }
+     })
+   })
+*/
+
+// Exercise 6 - MAKE IT MODULAR
+
+//1. Export a single function that takes exactly the arguments described.
+//2. Call the callback exactly once with an error or some data as described.
+//3. Don't change anything else, like global variables or stdout.
+//4. Handle all the errors that may occur and pass them to the callback.
+
+const fs = require('fs');
+const path = require('path');
+const module = require('./module.js')
+const directory = process.argv[2];
+const fileType = "." + process.argv[3];
+
+function bar (callback) {
+  foo(function (err, data) {
+    if (err)
+      return callback(err);
+    callback(null, data);
+  });
+}
+
+function readIt() {
+  fs.readdir(directory, function (err, list) {
+    if (err) {
+      return console.log(err);
+    }
+    let fileList = list.filter(function(el){
+      return path.extname(el) === fileType;
+    });
+
+    for (var i = 0; i < fileList.length; i++) {
+      console.log(fileList[i]);
+    }
 
   });
 }
